@@ -2,8 +2,6 @@ require('lualine').setup {
   options = {
     icons_enabled = true,
     theme = 'auto',
---    component_separators = { left = '', right = ''},
---    section_separators = { left = '', right = ''},
     component_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
     disabled_filetypes = {},
@@ -114,6 +112,7 @@ cmp.setup({
       vim.fn['vsnip#anonymous'](args.body)
     end,
   },
+  preselect = cmp.PreselectMode.Item,
   confirmation = { completeopt = 'menu,menuone,noinsert' },
   mapping = cmp.mapping.preset.insert({
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
